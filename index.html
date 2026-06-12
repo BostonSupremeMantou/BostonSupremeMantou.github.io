@@ -13,11 +13,13 @@
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#home">home</a>
-        <a href="#experience">experience</a>
-        <a href="#projects">projects</a>
-        <a href="#skills">skills</a>
-        <a href="#contact">contact</a>
+        <a class="brand" href="#home">Can He</a>
+        <div class="nav-links">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
     </header>
 
@@ -38,6 +40,12 @@
             <a href="https://www.linkedin.com/in/canhenortheastern">LinkedIn</a>
             <a href="mailto:hecanhappy@gmail.com">Email</a>
           </div>
+          <div class="signal-row" aria-label="Professional focus">
+            <span>Computer Vision</span>
+            <span>Backend Systems</span>
+            <span>Manufacturing AI</span>
+            <span>DevOps</span>
+          </div>
         </div>
         <figure class="portrait">
           <img
@@ -45,6 +53,21 @@
             alt="Can He"
           />
         </figure>
+      </section>
+
+      <section class="metrics" aria-label="Highlights">
+        <div>
+          <strong>3.94</strong>
+          <span>NEU CS GPA</span>
+        </div>
+        <div>
+          <strong>6-camera</strong>
+          <span>production CV systems</span>
+        </div>
+        <div>
+          <strong>4+</strong>
+          <span>defect workflows owned</span>
+        </div>
       </section>
 
       <section class="section" id="about">
@@ -62,7 +85,8 @@
       <section class="section" id="experience">
         <h2>Work Experience</h2>
 
-        <article class="item">
+        <div class="timeline">
+        <article class="item timeline-item">
           <div class="item-heading">
             <h3>Junior Software Developer</h3>
             <span>Tristar AI | May 2026 - Present</span>
@@ -86,7 +110,7 @@
           </ul>
         </article>
 
-        <article class="item">
+        <article class="item timeline-item">
           <div class="item-heading">
             <h3>Software Development Intern</h3>
             <span>Tristar AI | Jun 2025 - Jan 2026</span>
@@ -105,7 +129,7 @@
           </ul>
         </article>
 
-        <article class="item">
+        <article class="item timeline-item">
           <div class="item-heading">
             <h3>Teaching Assistant - DS5220 Supervised Machine Learning</h3>
             <span>Northeastern University | Sep 2024 - Present</span>
@@ -116,12 +140,14 @@
             office hours and review sessions.
           </p>
         </article>
+        </div>
       </section>
 
       <section class="section" id="projects">
         <h2>Selected Projects</h2>
 
-        <article class="item">
+        <div class="project-grid">
+        <article class="item project-card featured">
           <h3>Medegen Manufacturing Defect Detection Pipeline</h3>
           <p class="stack">
             Python, OpenCV, PyTorch, Ultralytics YOLO, RabbitMQ, AWS S3, PLC,
@@ -146,7 +172,7 @@
           </ul>
         </article>
 
-        <article class="item">
+        <article class="item project-card">
           <h3>Amcor Bottle Traceability Pipeline</h3>
           <p class="stack">Python, OpenCV, Terpsichore, S3, RabbitMQ, Prometheus</p>
           <p>
@@ -156,7 +182,7 @@
           </p>
         </article>
 
-        <article class="item">
+        <article class="item project-card">
           <h3>Greif Defect Data Analysis Pipeline</h3>
           <p class="stack">Python, Pandas, OpenCV, sensor/data streams</p>
           <p>
@@ -166,7 +192,7 @@
           </p>
         </article>
 
-        <article class="item">
+        <article class="item project-card">
           <h3>Quantitative Trading & RL Systems</h3>
           <p class="stack">Python, MQL4, backtesting, MT4 gateway, reinforcement learning</p>
           <p>
@@ -175,34 +201,45 @@
             gateways, optimization reports, and RL evaluation.
           </p>
         </article>
+        </div>
       </section>
 
       <section class="section" id="skills">
         <h2>Technical Skills</h2>
-        <dl class="skills-list">
-          <dt>Languages</dt>
-          <dd>Python, Java, C, R, MQL4, SQL</dd>
-          <dt>AI / Computer Vision</dt>
-          <dd>
-            OpenCV, PyTorch, Ultralytics YOLO, Scikit-Learn, NumPy, Pandas,
-            image preprocessing/postprocessing
-          </dd>
-          <dt>Backend / Data</dt>
-          <dd>
-            RabbitMQ, AWS S3, SQLAlchemy, Alembic, pytest, DAOs, async upload
-            queues, traceability metadata
-          </dd>
-          <dt>DevOps / Observability</dt>
-          <dd>
-            Docker, Kubernetes, Grafana, Prometheus, systemd, Git,
-            CI-ready repositories, runtime health checks
-          </dd>
-          <dt>Industrial / Trading Systems</dt>
-          <dd>
-            PLC integration, camera pipelines, MT4 gateways, backtesting
-            engines, risk controls, trade ledgers
-          </dd>
-        </dl>
+        <div class="skill-grid">
+          <section>
+            <h3>Languages</h3>
+            <p>Python, Java, C, R, MQL4, SQL</p>
+          </section>
+          <section>
+            <h3>AI / Computer Vision</h3>
+            <p>
+              OpenCV, PyTorch, Ultralytics YOLO, Scikit-Learn, NumPy, Pandas,
+              preprocessing/postprocessing
+            </p>
+          </section>
+          <section>
+            <h3>Backend / Data</h3>
+            <p>
+              RabbitMQ, AWS S3, SQLAlchemy, Alembic, pytest, DAOs, async upload
+              queues, traceability metadata
+            </p>
+          </section>
+          <section>
+            <h3>DevOps / Observability</h3>
+            <p>
+              Docker, Kubernetes, Grafana, Prometheus, systemd, Git, CI-ready
+              repositories, runtime health checks
+            </p>
+          </section>
+          <section>
+            <h3>Industrial / Trading Systems</h3>
+            <p>
+              PLC integration, camera pipelines, MT4 gateways, backtesting
+              engines, risk controls, trade ledgers
+            </p>
+          </section>
+        </div>
       </section>
 
       <section class="section">
