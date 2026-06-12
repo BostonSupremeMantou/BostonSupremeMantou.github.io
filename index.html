@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Can He - Software developer focused on production computer vision, manufacturing AI systems, and quantitative research systems."
+    />
+    <title>Can He</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home">home</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+
+    <main id="home" class="page">
+      <section class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">Software Developer</p>
+          <h1>Can He</h1>
+          <p class="lead">
+            I build production computer vision and manufacturing AI systems:
+            multi-camera inspection pipelines, defect detection workflows,
+            traceability infrastructure, PLC feedback, cloud messaging, and
+            deployment observability.
+          </p>
+          <div class="actions" aria-label="Profile links">
+            <a href="assets/can-he-resume.pdf">Resume PDF</a>
+            <a href="https://github.com/BostonSupremeMantou">GitHub</a>
+            <a href="https://www.linkedin.com/in/canhenortheastern">LinkedIn</a>
+            <a href="mailto:hecanhappy@gmail.com">Email</a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <img
+            src="https://avatars.githubusercontent.com/u/155683670?v=4"
+            alt="Can He"
+          />
+        </figure>
+      </section>
+
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p>
+          I am a software developer with a computer science background and
+          prior manufacturing engineering experience. My current work focuses
+          on production-grade computer vision pipelines for manufacturing
+          customers, connecting camera capture, model inference, traceability
+          metadata, message queues, storage, PLC feedback, monitoring, and
+          deployment workflows.
+        </p>
+      </section>
+
+      <section class="section" id="experience">
+        <h2>Work Experience</h2>
+
+        <article class="item">
+          <div class="item-heading">
+            <h3>Junior Software Developer</h3>
+            <span>Tristar AI | May 2026 - Present</span>
+          </div>
+          <ul>
+            <li>
+              Build production computer vision pipelines for manufacturing
+              customers, translating inspection requirements into configurable
+              capture, inference, traceability, and deployment workflows.
+            </li>
+            <li>
+              Develop Python services for preprocessing/postprocessing,
+              task/result schemas, RabbitMQ/S3 publishing, PLC rejection
+              feedback, runtime health checks, and deployment configuration.
+            </li>
+            <li>
+              Improve reliability with pytest coverage, dependency stubs,
+              monitoring hooks, Grafana/Prometheus-ready metrics,
+              Docker/Kubernetes-oriented packaging, and deployment runbooks.
+            </li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-heading">
+            <h3>Software Development Intern</h3>
+            <span>Tristar AI | Jun 2025 - Jan 2026</span>
+          </div>
+          <ul>
+            <li>
+              Implemented DAOs, upload schedulers, camera/data capture
+              utilities, defect-analysis scripts, config loaders, and stubbed
+              local/dev test flows for customer-facing AI systems.
+            </li>
+            <li>
+              Validated behavior across camera, messaging, storage, and
+              inference boundaries using pytest, dependency injection, local
+              fixtures, and CI-ready project structure.
+            </li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-heading">
+            <h3>Teaching Assistant - DS5220 Supervised Machine Learning</h3>
+            <span>Northeastern University | Sep 2024 - Present</span>
+          </div>
+          <p>
+            Supported ML course delivery by grading assignments, preparing
+            answer keys, explaining supervised-learning concepts, and leading
+            office hours and review sessions.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Selected Projects</h2>
+
+        <article class="item">
+          <h3>Medegen Manufacturing Defect Detection Pipeline</h3>
+          <p class="stack">
+            Python, OpenCV, PyTorch, Ultralytics YOLO, RabbitMQ, AWS S3, PLC,
+            systemd
+          </p>
+          <ul>
+            <li>
+              Owned tub defect detection for four defect categories, including
+              image preprocessing, model inference, postprocessing,
+              classification, and line/camera-specific filtering.
+            </li>
+            <li>
+              Worked across capture, inference, rejection, results,
+              station-status, alerting, and outbox modules in a six-camera,
+              three-line production system with multiprocessing workers.
+            </li>
+            <li>
+              Built real-time quality feedback with FIFO-triggered capture,
+              PLC-driven rejection, RabbitMQ/S3 publishing, Slack alerts,
+              auditable records, and runtime failure-mode tests.
+            </li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <h3>Amcor Bottle Traceability Pipeline</h3>
+          <p class="stack">Python, OpenCV, Terpsichore, S3, RabbitMQ, Prometheus</p>
+          <p>
+            Built an end-to-end traceability pipeline modeling camera frames,
+            station/team/factory metadata, task lifecycle state, result
+            payloads, async upload queues, and monitored execution.
+          </p>
+        </article>
+
+        <article class="item">
+          <h3>Greif Defect Data Analysis Pipeline</h3>
+          <p class="stack">Python, Pandas, OpenCV, sensor/data streams</p>
+          <p>
+            Analyzed defect records, image evidence, sensor/process streams,
+            and timing signals to surface recurring failure patterns and
+            support downstream inspection workflows.
+          </p>
+        </article>
+
+        <article class="item">
+          <h3>Quantitative Trading & RL Systems</h3>
+          <p class="stack">Python, MQL4, backtesting, MT4 gateway, reinforcement learning</p>
+          <p>
+            Built XAUUSD/FX research systems with spread/slippage/commission-aware
+            backtests, equity curves, risk metrics, trade ledgers, MT4 command
+            gateways, optimization reports, and RL evaluation.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>Technical Skills</h2>
+        <dl class="skills-list">
+          <dt>Languages</dt>
+          <dd>Python, Java, C, R, MQL4, SQL</dd>
+          <dt>AI / Computer Vision</dt>
+          <dd>
+            OpenCV, PyTorch, Ultralytics YOLO, Scikit-Learn, NumPy, Pandas,
+            image preprocessing/postprocessing
+          </dd>
+          <dt>Backend / Data</dt>
+          <dd>
+            RabbitMQ, AWS S3, SQLAlchemy, Alembic, pytest, DAOs, async upload
+            queues, traceability metadata
+          </dd>
+          <dt>DevOps / Observability</dt>
+          <dd>
+            Docker, Kubernetes, Grafana, Prometheus, systemd, Git,
+            CI-ready repositories, runtime health checks
+          </dd>
+          <dt>Industrial / Trading Systems</dt>
+          <dd>
+            PLC integration, camera pipelines, MT4 gateways, backtesting
+            engines, risk controls, trade ledgers
+          </dd>
+        </dl>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <article class="item compact">
+          <h3>Northeastern University</h3>
+          <p>M.S. Computer Science Align, GPA 3.94 / 4.0</p>
+          <p>M.S. Project Management, GPA 3.761 / 4.0</p>
+        </article>
+        <article class="item compact">
+          <h3>Chongqing University of Technology</h3>
+          <p>B.E. Mechanical Engineering</p>
+        </article>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:hecanhappy@gmail.com">hecanhappy@gmail.com</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/canhenortheastern"
+            >linkedin.com/in/canhenortheastern</a
+          >
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/BostonSupremeMantou"
+            >github.com/BostonSupremeMantou</a
+          >
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
