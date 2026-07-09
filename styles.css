@@ -200,6 +200,25 @@ h3 {
   align-items: baseline;
 }
 
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.project-heading h3 {
+  min-width: 0;
+}
+
+.project-heading span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+}
+
 .item-heading span,
 .stack {
   color: var(--muted);
@@ -265,6 +284,16 @@ li {
 
   .item-heading {
     display: block;
+  }
+
+  .project-heading {
+    display: block;
+  }
+
+  .project-heading span {
+    display: block;
+    margin-top: 2px;
+    text-align: left;
   }
 
   .skills-list {
