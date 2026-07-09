@@ -16,6 +16,7 @@
         <a href="#home">home</a>
         <a href="#experience">experience</a>
         <a href="#projects">projects</a>
+        <a href="#repositories">repositories</a>
         <a href="#skills">skills</a>
         <a href="#contact">contact</a>
       </nav>
@@ -121,62 +122,182 @@
       </section>
 
       <section class="section" id="projects">
-        <h2>Selected Projects</h2>
+        <h2>Production Projects</h2>
 
-        <article class="item">
-          <h3>Medegen Manufacturing Defect Detection Pipeline</h3>
-          <p class="stack">
-            Python, OpenCV, PyTorch, Ultralytics YOLO, RabbitMQ, AWS S3, PLC,
-            systemd
+        <article class="item case-study">
+          <h3>Amcor Bottle Traceability Pipeline</h3>
+          <p class="stack">Python, OpenCV, Terpsichore, RabbitMQ, AWS S3, Prometheus, pytest</p>
+          <p>
+            Owner of the complete camera-to-cloud traceability system for
+            high-speed bottle production. The pipeline connects camera frame
+            ingestion, production metadata, task lifecycle state, evidence
+            storage, message publishing, and runtime monitoring into one
+            production workflow.
           </p>
           <ul>
             <li>
-              Owned all tub defect detection work for four defect categories,
-              spanning image preprocessing, model inference, postprocessing,
-              classification, and line/camera-specific filtering.
+              Designed the task model around factory, station, team, frame,
+              defect/result, and lifecycle metadata so each inspection event
+              can be traced back to its production context.
             </li>
             <li>
-              Implemented and integrated capture, inference, rejection,
-              results, station-status, alerting, and outbox modules in a
-              six-camera, three-line production system with multiprocessing
-              workers.
+              Implemented Terpsichore runner configuration, dev/prod modes,
+              Prometheus heartbeat/metrics, RabbitMQ result publishing, and AWS
+              S3 evidence uploads.
             </li>
             <li>
-              Delivered real-time quality feedback through FIFO-triggered
-              capture, PLC-driven rejection, RabbitMQ/AWS S3 publishing, Slack
-              alerts, auditable records, and runtime failure-mode tests.
+              Built resilient upload and result-handling paths so monitoring,
+              metadata, and image evidence stay aligned with high-speed line
+              throughput.
             </li>
           </ul>
         </article>
 
-        <article class="item">
-          <h3>Amcor Bottle Traceability Pipeline</h3>
-          <p class="stack">Python, OpenCV, Terpsichore, AWS S3, RabbitMQ, Prometheus</p>
+        <article class="item case-study">
+          <h3>Spectrum High-Speed Defect Detection Pipeline</h3>
+          <p class="stack">Python, OpenCV, PyTorch, Ultralytics YOLO, UNet, RabbitMQ, AWS S3</p>
           <p>
-            Built the full traceability pipeline connecting camera frames,
-            station/team/factory metadata, task lifecycle states, result
-            payloads, asynchronous upload queues, and monitored execution.
+            Built a low-latency production inspection pipeline for defect
+            detection on fast-moving manufacturing imagery. The system combines
+            IPC camera ingestion, preprocessing, model inference, batch result
+            processing, and evidence publishing.
           </p>
+          <ul>
+            <li>
+              Implemented camera capture and cropping logic for IPC camera
+              streams, including serial-aware frame handling and production
+              metadata propagation.
+            </li>
+            <li>
+              Integrated YOLO and UNet model wrappers for detection and
+              segmentation-style workflows, with preprocessing/postprocessing
+              tuned for line-speed operation.
+            </li>
+            <li>
+              Built result pooling, RabbitMQ publishing, AWS S3 uploads, and
+              threshold/filtering logic to keep false-positive rate near 0.01%.
+            </li>
+          </ul>
         </article>
 
-        <article class="item">
+        <article class="item case-study">
+          <h3>Medegen Manufacturing Defect Detection Pipeline</h3>
+          <p class="stack">Python, OpenCV, PyTorch, Terpsichore, PLC, RabbitMQ, AWS S3, systemd</p>
+          <p>
+            Owned tub defect detection and production reliability work in a
+            six-camera, three-line manufacturing inspection system. The system
+            uses FIFO-triggered capture, multiprocessing inference, PLC
+            rejection, and crash-resilient result publishing.
+          </p>
+          <ul>
+            <li>
+              Implemented detection workflows for four tub defect categories,
+              including preprocessing, inference, postprocessing,
+              classification, and line/camera-specific filtering.
+            </li>
+            <li>
+              Maintained capture, inference, rejection, result, station-status,
+              alerting, and outbox modules across a production pipeline with
+              multiprocessing workers.
+            </li>
+            <li>
+              Added outbox-based S3/AMQP publishing, PLC rejection behavior,
+              runtime failure-mode tests, and low-latency tuning with
+              false-positive behavior around 0.01%.
+            </li>
+          </ul>
+        </article>
+
+        <article class="item case-study">
           <h3>Greif Defect Data Analysis Pipeline</h3>
-          <p class="stack">Python, Pandas, OpenCV, sensor/data streams</p>
+          <p class="stack">Python, Pandas, OpenCV, sensor/process data streams</p>
           <p>
-            Performed end-to-end defect analysis across records, image
+            Performed end-to-end analysis across defect records, image
             evidence, sensor/process streams, and timing signals to identify
-            recurring failure patterns and support downstream inspection
-            workflows.
+            recurring failure patterns and support downstream inspection logic.
           </p>
         </article>
 
-        <article class="item">
-          <h3>Quantitative Trading & RL Systems</h3>
-          <p class="stack">Python, MQL4, backtesting, MT4 gateway, reinforcement learning</p>
+        <article class="item case-study">
+          <h3>PaddlePaddle RTX 50-Series GPU Compatibility</h3>
+          <p class="stack">C++, Python, CUDA, CMake, Docker, PaddlePaddle</p>
           <p>
-            Built XAUUSD/FX research systems with spread/slippage/commission-aware
-            backtests, equity curves, risk metrics, trade ledgers, MT4 command
-            gateways, optimization reports, and RL evaluation.
+            Adapted PaddlePaddle build/dependency configuration for NVIDIA RTX
+            50-series/Blackwell GPUs, CUDA 12.8/12.9/13.x wheels, architecture
+            flags, and containerized build validation.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="repositories">
+        <h2>Engineering Repositories</h2>
+
+        <article class="item repo-entry">
+          <h3>Manufacturing AI systems</h3>
+          <p class="stack">
+            Tristar-AI/amcor_bottle_traceability, Tristar-AI/spectrum,
+            Tristar-AI/medegen, Tristar-AI/greif
+          </p>
+          <p>
+            Production computer vision and manufacturing AI repositories
+            covering traceability, defect detection, result publishing, camera
+            capture, data analysis, deployment configuration, and monitoring.
+            These projects show the core pattern of my work: take ambiguous
+            manufacturing requirements and turn them into production services
+            with camera inputs, model outputs, cloud evidence, queue messages,
+            and operational health checks.
+          </p>
+        </article>
+
+        <article class="item repo-entry">
+          <h3>Infrastructure and observability</h3>
+          <p class="stack">
+            Tristar-AI/terpsichore, Tristar-AI/albus, Tristar-AI/fawkes,
+            Tristar-AI/heimdall, Tristar-AI/system-metrics
+          </p>
+          <p>
+            Backend, dashboard, orchestration, and monitoring repositories
+            around the manufacturing platform. The relevant work connects
+            pipeline execution, Prometheus-compatible metrics, service health,
+            dashboard availability, and deployment-oriented runtime behavior.
+          </p>
+        </article>
+
+        <article class="item repo-entry">
+          <h3>Open-source framework compatibility</h3>
+          <p class="stack">BostonSupremeMantou/Paddle</p>
+          <p>
+            PaddlePaddle fork used for GPU compatibility exploration around
+            NVIDIA RTX 50-series/Blackwell hardware, CUDA 12.8/12.9/13.x
+            dependency paths, build configuration, CMake/CUDA flags, Dockerized
+            builds, and low-level framework validation.
+          </p>
+        </article>
+
+        <article class="item repo-entry">
+          <h3>Quantitative systems and research tooling</h3>
+          <p class="stack">
+            BostonSupremeMantou/Nemesis-Backtest-Plateform,
+            BostonSupremeMantou/Lyre, BostonSupremeMantou/Argus,
+            BostonSupremeMantou/Vanquish, BostonSupremeMantou/Oblivion
+          </p>
+          <p>
+            Private quantitative engineering repositories covering feature
+            generation, high-speed financial data storage, backtesting,
+            spread/slippage/commission-aware simulation, MT4 gateway
+            integration, trade ledgers, optimization reports, and risk
+            controls.
+          </p>
+        </article>
+
+        <article class="item repo-entry">
+          <h3>Machine learning coursework and experiments</h3>
+          <p class="stack">BostonSupremeMantou/CS5180-RL-project</p>
+          <p>
+            Reinforcement-learning project work focused on evaluation and
+            adaptive decision-making. I keep this separate from production work,
+            but it is useful context for my ML background and experimentation
+            habits.
           </p>
         </article>
       </section>
@@ -185,7 +306,7 @@
         <h2>Technical Skills</h2>
         <dl class="skills-list">
           <dt>Languages</dt>
-          <dd>Python, Java, C, R, MQL4, SQL</dd>
+          <dd>Python, Java, C/C++, R, MQL4, SQL</dd>
           <dt>AI / Computer Vision</dt>
           <dd>
             OpenCV, PyTorch, Ultralytics YOLO, Scikit-Learn, NumPy, Pandas,
@@ -198,8 +319,8 @@
           </dd>
           <dt>DevOps / Observability</dt>
           <dd>
-            Docker, Kubernetes, Grafana, Prometheus, systemd, Git,
-            CI-ready repositories, runtime health checks
+            Docker, Kubernetes, Grafana, Prometheus, systemd, Git, CMake,
+            CI-ready testing workflows
           </dd>
           <dt>Industrial / Trading Systems</dt>
           <dd>

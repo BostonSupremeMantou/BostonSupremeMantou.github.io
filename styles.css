@@ -173,6 +173,22 @@ h3 {
   margin-bottom: 22px;
 }
 
+.case-study,
+.repo-entry {
+  padding-bottom: 4px;
+}
+
+.case-study > p:not(.stack),
+.repo-entry > p:not(.stack) {
+  max-width: 900px;
+  color: #343b44;
+}
+
+.repo-entry {
+  border-left: 3px solid var(--line);
+  padding-left: 16px;
+}
+
 .item.compact {
   margin-bottom: 14px;
 }
