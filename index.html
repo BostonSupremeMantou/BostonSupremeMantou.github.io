@@ -122,10 +122,67 @@
       </section>
 
       <section class="section" id="projects">
-        <h2>Production Projects</h2>
+        <h2>Selected Projects</h2>
 
         <article class="item case-study">
-          <h3>Amcor Bottle Traceability Pipeline</h3>
+          <h3>Tick-Level Quantitative Trading and Research Platform</h3>
+          <p class="stack">Python, PyArrow, Polars, Pandas, NumPy, SQLite, Parquet, MQL4, MT4</p>
+          <p>
+            Built a tick-level FX/XAUUSD research stack covering market-data
+            ingestion, canonical tick/bar storage, feature generation,
+            backtesting, MT4 gateway integration, experiment replay, and
+            execution-cost modeling.
+          </p>
+          <ul>
+            <li>
+              Developed Lyre as the market-data truth layer with canonical tick
+              shards, SQLite control-plane metadata, partitioned Parquet/Arrow
+              hot paths, benchmark reporting, and perf-gate tooling.
+            </li>
+            <li>
+              Designed Nemesis as a protocol-first backtesting and evaluation
+              platform with MT4-like strategy APIs, instrument contracts,
+              spread/slippage/commission/margin models, run registries, and
+              deterministic replay checks.
+            </li>
+            <li>
+              Built Argus, Vanquish, and Oblivion workflows for no-lookahead
+              feature generation, XAUUSD strategy simulation, live MT4 command
+              gateways, trade ledgers, optimization reports, and risk controls.
+            </li>
+            <li>
+              Engineered the data path around 65,536-row Arrow batches and
+              1M+ rows/sec read-performance gates for high-throughput tick
+              research workloads.
+            </li>
+          </ul>
+        </article>
+
+        <article class="item case-study">
+          <h3>PaddlePaddle RTX 50-Series GPU Compatibility</h3>
+          <p class="stack">C++, Python, CUDA, CMake, Docker, PaddlePaddle</p>
+          <p>
+            Adapted PaddlePaddle build and dependency configuration for NVIDIA
+            RTX 50-series/Blackwell GPUs, focusing on CUDA compatibility,
+            architecture flags, containerized builds, and low-level framework
+            validation.
+          </p>
+          <ul>
+            <li>
+              Investigated CUDA 12.8/12.9/13.x wheel and dependency paths,
+              CMake/CUDA architecture settings, and build-system assumptions
+              that affect newer GPU support.
+            </li>
+            <li>
+              Used Dockerized build environments to isolate toolchain issues,
+              validate reproducible framework builds, and document compatibility
+              requirements for RTX 50-series hardware.
+            </li>
+          </ul>
+        </article>
+
+        <article class="item case-study">
+          <h3>High-Speed Bottle Traceability Pipeline</h3>
           <p class="stack">Python, OpenCV, Terpsichore, RabbitMQ, AWS S3, Prometheus, pytest</p>
           <p>
             Owner of the complete camera-to-cloud traceability system for
@@ -154,7 +211,7 @@
         </article>
 
         <article class="item case-study">
-          <h3>Spectrum High-Speed Defect Detection Pipeline</h3>
+          <h3>High-Speed Defect Detection Pipeline</h3>
           <p class="stack">Python, OpenCV, PyTorch, Ultralytics YOLO, UNet, RabbitMQ, AWS S3</p>
           <p>
             Built a low-latency production inspection pipeline for defect
@@ -181,7 +238,7 @@
         </article>
 
         <article class="item case-study">
-          <h3>Medegen Manufacturing Defect Detection Pipeline</h3>
+          <h3>Multi-Camera Manufacturing Defect Detection System</h3>
           <p class="stack">Python, OpenCV, PyTorch, Terpsichore, PLC, RabbitMQ, AWS S3, systemd</p>
           <p>
             Owned tub defect detection and production reliability work in a
@@ -209,22 +266,12 @@
         </article>
 
         <article class="item case-study">
-          <h3>Greif Defect Data Analysis Pipeline</h3>
+          <h3>Manufacturing Defect Data Analysis Pipeline</h3>
           <p class="stack">Python, Pandas, OpenCV, sensor/process data streams</p>
           <p>
             Performed end-to-end analysis across defect records, image
             evidence, sensor/process streams, and timing signals to identify
             recurring failure patterns and support downstream inspection logic.
-          </p>
-        </article>
-
-        <article class="item case-study">
-          <h3>PaddlePaddle RTX 50-Series GPU Compatibility</h3>
-          <p class="stack">C++, Python, CUDA, CMake, Docker, PaddlePaddle</p>
-          <p>
-            Adapted PaddlePaddle build/dependency configuration for NVIDIA RTX
-            50-series/Blackwell GPUs, CUDA 12.8/12.9/13.x wheels, architecture
-            flags, and containerized build validation.
           </p>
         </article>
       </section>
@@ -233,10 +280,39 @@
         <h2>Engineering Repositories</h2>
 
         <article class="item repo-entry">
+          <h3>Tick-level quantitative engineering stack</h3>
+          <p class="stack">
+            BostonSupremeMantou/Nemesis-Backtest-Plateform,
+            BostonSupremeMantou/Lyre, BostonSupremeMantou/Argus,
+            BostonSupremeMantou/Vanquish, BostonSupremeMantou/Oblivion
+          </p>
+          <p>
+            Private quantitative engineering repositories for tick/bar market
+            data storage, Arrow/Parquet hot-path reads, no-lookahead feature
+            generation, cost-aware backtesting, MT4 execution gateway work,
+            optimization reports, and strategy evaluation. The stack is built
+            around reproducible replay, explicit contract metadata, risk-aware
+            trade accounting, and benchmark gates targeting 1M+ rows/sec reads
+            for high-frequency research workloads.
+          </p>
+        </article>
+
+        <article class="item repo-entry">
+          <h3>Open-source framework compatibility</h3>
+          <p class="stack">BostonSupremeMantou/Paddle</p>
+          <p>
+            PaddlePaddle fork used for GPU compatibility exploration around
+            NVIDIA RTX 50-series/Blackwell hardware, CUDA 12.8/12.9/13.x
+            dependency paths, build configuration, CMake/CUDA flags, Dockerized
+            builds, and low-level framework validation.
+          </p>
+        </article>
+
+        <article class="item repo-entry">
           <h3>Manufacturing AI systems</h3>
           <p class="stack">
-            Tristar-AI/amcor_bottle_traceability, Tristar-AI/spectrum,
-            Tristar-AI/medegen, Tristar-AI/greif
+            Production traceability, high-speed defect detection, multi-camera
+            inspection, and defect analytics repositories
           </p>
           <p>
             Production computer vision and manufacturing AI repositories
@@ -264,33 +340,6 @@
         </article>
 
         <article class="item repo-entry">
-          <h3>Open-source framework compatibility</h3>
-          <p class="stack">BostonSupremeMantou/Paddle</p>
-          <p>
-            PaddlePaddle fork used for GPU compatibility exploration around
-            NVIDIA RTX 50-series/Blackwell hardware, CUDA 12.8/12.9/13.x
-            dependency paths, build configuration, CMake/CUDA flags, Dockerized
-            builds, and low-level framework validation.
-          </p>
-        </article>
-
-        <article class="item repo-entry">
-          <h3>Quantitative systems and research tooling</h3>
-          <p class="stack">
-            BostonSupremeMantou/Nemesis-Backtest-Plateform,
-            BostonSupremeMantou/Lyre, BostonSupremeMantou/Argus,
-            BostonSupremeMantou/Vanquish, BostonSupremeMantou/Oblivion
-          </p>
-          <p>
-            Private quantitative engineering repositories covering feature
-            generation, high-speed financial data storage, backtesting,
-            spread/slippage/commission-aware simulation, MT4 gateway
-            integration, trade ledgers, optimization reports, and risk
-            controls.
-          </p>
-        </article>
-
-        <article class="item repo-entry">
           <h3>Machine learning coursework and experiments</h3>
           <p class="stack">BostonSupremeMantou/CS5180-RL-project</p>
           <p>
@@ -309,13 +358,13 @@
           <dd>Python, Java, C/C++, R, MQL4, SQL</dd>
           <dt>AI / Computer Vision</dt>
           <dd>
-            OpenCV, PyTorch, Ultralytics YOLO, Scikit-Learn, NumPy, Pandas,
-            image preprocessing/postprocessing
+            OpenCV, PyTorch, Ultralytics YOLO, UNet, Scikit-Learn,
+            PaddlePaddle, NumPy, Pandas, image preprocessing/postprocessing
           </dd>
           <dt>Backend / Data</dt>
           <dd>
-            RabbitMQ, AWS S3, SQLAlchemy, Alembic, pytest, DAOs, async upload
-            queues, traceability metadata
+            RabbitMQ, AWS S3, SQLAlchemy, Alembic, PyArrow, Polars, Parquet,
+            SQLite, pytest, DAOs, async upload queues, traceability metadata
           </dd>
           <dt>DevOps / Observability</dt>
           <dd>
@@ -324,8 +373,9 @@
           </dd>
           <dt>Industrial / Trading Systems</dt>
           <dd>
-            PLC integration, camera pipelines, MT4 gateways, backtesting
-            engines, risk controls, trade ledgers
+            PLC integration, camera pipelines, tick-level data pipelines, MT4
+            gateways, MQL4, backtesting engines, cost/slippage models, risk
+            controls, trade ledgers
           </dd>
         </dl>
       </section>
