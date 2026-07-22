@@ -118,6 +118,14 @@ h3 {
   letter-spacing: 0;
 }
 
+.project-category {
+  margin: 20px 0 14px;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
 .lead {
   max-width: 680px;
   color: #2d333b;
