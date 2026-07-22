@@ -6,7 +6,9 @@
   --panel: #f7f9fc;
   --link: #174ea6;
   --work-accent: #1f7a6d;
+  --work-panel: #f2faf8;
   --personal-accent: #9a5c21;
+  --personal-panel: #fff7ed;
   --max: 980px;
 }
 
@@ -121,22 +123,28 @@ h3 {
 }
 
 .project-group {
-  margin: 0 0 34px;
+  margin: 0 0 38px;
 }
 
 .project-group + .project-group {
-  margin-top: 36px;
+  margin-top: 42px;
 }
 
 .project-group-header {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 20px;
-  align-items: start;
-  margin-bottom: 20px;
-  padding: 14px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+  padding: 14px 16px;
+  border-left: 5px solid var(--line);
+  border-radius: 6px;
+}
+
+.project-group-work .project-group-header {
+  border-left-color: var(--work-accent);
+  background: var(--work-panel);
+}
+
+.project-group-personal .project-group-header {
+  border-left-color: var(--personal-accent);
+  background: var(--personal-panel);
 }
 
 .project-category {
@@ -148,24 +156,16 @@ h3 {
 }
 
 .project-group-summary {
-  margin: 0;
+  margin: 4px 0 0;
   max-width: 650px;
   color: var(--muted);
   font-size: 14px;
 }
 
 .project-group .case-study {
-  margin-left: 8px;
-  padding-left: 18px;
-  border-left: 3px solid var(--line);
-}
-
-.project-group-work .case-study {
-  border-left-color: var(--work-accent);
-}
-
-.project-group-personal .case-study {
-  border-left-color: var(--personal-accent);
+  margin: 0;
+  padding: 20px 0 22px;
+  border-bottom: 1px solid var(--line);
 }
 
 .lead {
@@ -252,9 +252,10 @@ h3 {
 
 .project-heading {
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: baseline;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .project-heading h3 {
@@ -263,10 +264,14 @@ h3 {
 
 .project-heading span {
   flex: 0 0 auto;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
   color: var(--muted);
-  font-size: 14px;
-  font-weight: 400;
-  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
 }
 
 .item-heading span,
@@ -346,14 +351,8 @@ li {
     text-align: left;
   }
 
-  .project-group-header {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
   .project-group .case-study {
-    margin-left: 0;
-    padding-left: 14px;
+    padding: 18px 0 20px;
   }
 
   .skills-list {
