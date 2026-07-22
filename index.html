@@ -150,69 +150,6 @@
 
         <article class="item case-study">
           <div class="project-heading">
-            <h3>Tick-Level Quantitative Trading and Research Platform</h3>
-            <span>Personal Project</span>
-          </div>
-          <p class="stack">Python, PyArrow, Polars, Pandas, NumPy, SQLite, Parquet, MQL4, MT4</p>
-          <p>
-            Built a tick-level FX/XAUUSD research stack covering market-data
-            ingestion, canonical tick/bar storage, feature generation,
-            backtesting, MT4 gateway integration, experiment replay, and
-            execution-cost modeling.
-          </p>
-          <ul>
-            <li>
-              Developed Lyre as the market-data truth layer with canonical tick
-              shards, SQLite control-plane metadata, partitioned Parquet/Arrow
-              hot paths, benchmark reporting, and perf-gate tooling.
-            </li>
-            <li>
-              Designed Nemesis as a protocol-first backtesting and evaluation
-              platform with MT4-like strategy APIs, instrument contracts,
-              spread/slippage/commission/margin models, run registries, and
-              deterministic replay checks.
-            </li>
-            <li>
-              Built Argus, Vanquish, and Oblivion workflows for no-lookahead
-              feature generation, XAUUSD strategy simulation, live MT4 command
-              gateways, trade ledgers, optimization reports, and risk controls.
-            </li>
-            <li>
-              Engineered the data path around 65,536-row Arrow batches and
-              1M+ rows/sec read-performance gates for high-throughput tick
-              research workloads.
-            </li>
-          </ul>
-        </article>
-
-        <article class="item case-study">
-          <div class="project-heading">
-            <h3>PaddlePaddle RTX 50-Series GPU Compatibility</h3>
-            <span>Personal Project</span>
-          </div>
-          <p class="stack">C++, Python, CUDA, CMake, Docker, PaddlePaddle</p>
-          <p>
-            Adapted PaddlePaddle build and dependency configuration for NVIDIA
-            RTX 50-series/Blackwell GPUs, focusing on CUDA compatibility,
-            architecture flags, containerized builds, and low-level framework
-            validation.
-          </p>
-          <ul>
-            <li>
-              Investigated CUDA 12.8/12.9/13.x wheel and dependency paths,
-              CMake/CUDA architecture settings, and build-system assumptions
-              that affect newer GPU support.
-            </li>
-            <li>
-              Used Dockerized build environments to isolate toolchain issues,
-              validate reproducible framework builds, and document compatibility
-              requirements for RTX 50-series hardware.
-            </li>
-          </ul>
-        </article>
-
-        <article class="item case-study">
-          <div class="project-heading">
             <h3>High-Speed Bottle Traceability Pipeline</h3>
             <span>Tristar AI</span>
           </div>
@@ -315,6 +252,69 @@
             evidence, sensor/process streams, and timing signals to identify
             recurring failure patterns and support downstream inspection logic.
           </p>
+        </article>
+
+        <article class="item case-study">
+          <div class="project-heading">
+            <h3>PaddlePaddle RTX 50-Series GPU Compatibility</h3>
+            <span>Personal Project</span>
+          </div>
+          <p class="stack">C++, Python, CUDA, CMake, Docker, PaddlePaddle</p>
+          <p>
+            Adapted PaddlePaddle build and dependency configuration for NVIDIA
+            RTX 50-series/Blackwell GPUs, focusing on CUDA compatibility,
+            architecture flags, containerized builds, and low-level framework
+            validation.
+          </p>
+          <ul>
+            <li>
+              Investigated CUDA 12.8/12.9/13.x wheel and dependency paths,
+              CMake/CUDA architecture settings, and build-system assumptions
+              that affect newer GPU support.
+            </li>
+            <li>
+              Used Dockerized build environments to isolate toolchain issues,
+              validate reproducible framework builds, and document compatibility
+              requirements for RTX 50-series hardware.
+            </li>
+          </ul>
+        </article>
+
+        <article class="item case-study">
+          <div class="project-heading">
+            <h3>Tick-Level Quantitative Trading and Research Platform</h3>
+            <span>Personal Project</span>
+          </div>
+          <p class="stack">Python, PyArrow, Polars, Pandas, NumPy, SQLite, Parquet, MQL4, MT4</p>
+          <p>
+            Built a tick-level FX/XAUUSD research stack covering market-data
+            ingestion, canonical tick/bar storage, feature generation,
+            backtesting, MT4 gateway integration, experiment replay, and
+            execution-cost modeling.
+          </p>
+          <ul>
+            <li>
+              Developed Lyre as the market-data truth layer with canonical tick
+              shards, SQLite control-plane metadata, partitioned Parquet/Arrow
+              hot paths, benchmark reporting, and perf-gate tooling.
+            </li>
+            <li>
+              Designed Nemesis as a protocol-first backtesting and evaluation
+              platform with MT4-like strategy APIs, instrument contracts,
+              spread/slippage/commission/margin models, run registries, and
+              deterministic replay checks.
+            </li>
+            <li>
+              Built Argus, Vanquish, and Oblivion workflows for no-lookahead
+              feature generation, XAUUSD strategy simulation, live MT4 command
+              gateways, trade ledgers, optimization reports, and risk controls.
+            </li>
+            <li>
+              Engineered the data path around 65,536-row Arrow batches and
+              1M+ rows/sec read-performance gates for high-throughput tick
+              research workloads.
+            </li>
+          </ul>
         </article>
       </section>
 
