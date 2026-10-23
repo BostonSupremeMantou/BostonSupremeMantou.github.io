@@ -375,17 +375,34 @@ summary:focus-visible {
   outline-offset: 5px;
 }
 
-.project-details > summary > .project-heading {
-  display: inline-flex;
-  width: calc(100% - 24px);
-  vertical-align: top;
+.project-details > summary {
+  margin-left: 22px;
+  list-style-position: outside;
+}
+
+.project-details > summary > .project-heading,
+.project-static > .project-heading {
+  display: flex;
   align-items: baseline;
 }
 
-.project-details > summary > p {
-  margin: 10px 0 0 22px;
+.project-details > summary > p,
+.project-static > .project-heading + p {
+  margin: 10px 0 0;
   max-width: 878px;
   color: #343b44;
+}
+
+.project-static {
+  margin-left: 22px;
+}
+
+.project-static > p + p {
+  margin-top: 14px;
+}
+
+.project-static > :last-child {
+  margin-bottom: 0;
 }
 
 .project-detail-body {
@@ -413,7 +430,8 @@ summary:focus-visible {
   padding: 16px 0;
 }
 
-.component h4 {
+.component h4,
+.related-work h4 {
   margin: 0;
   color: var(--ink);
   font-size: 16px;
@@ -425,9 +443,12 @@ summary:focus-visible {
 }
 
 .related-work {
-  margin: 16px 0 0;
-  color: var(--muted);
-  font-size: 14px;
+  margin-top: 16px;
+  color: #343b44;
+}
+
+.related-work > p {
+  margin: 10px 0 0;
 }
 
 @media print {
