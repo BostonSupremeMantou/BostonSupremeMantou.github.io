@@ -9,6 +9,7 @@
     />
     <title>Can He</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -576,17 +577,104 @@
                 Personal research platform | Data, features, evaluation,
                 orchestration, risk, and execution interfaces
               </p>
-              <p class="platform-flow">
-                <strong>Data and evaluation:</strong> Lyre feeds Argus feature
-                workflows; Volante produces model artifacts; Nemesis evaluates
-                strategy evidence. <strong>Coordination and execution:</strong>
-                Aletheia orchestrates stages, Metis allocates risk, and Hermes
-                handles terminal-facing commands and receipts.
-              </p>
+              <figure
+                class="platform-diagram"
+                aria-labelledby="architecture-caption"
+              >
+                <figcaption id="architecture-caption">
+                  Core system architecture
+                </figcaption>
+                <a
+                  class="architecture-node orchestrator-node"
+                  href="#component-aletheia"
+                  data-component-link
+                >
+                  <span class="node-name">Aletheia</span>
+                  <span class="node-purpose"
+                    >Workflow orchestration &amp; recovery</span
+                  >
+                </a>
+                <ol
+                  class="architecture-stages"
+                  aria-label="Research-to-execution flow"
+                >
+                  <li class="architecture-stage">
+                    <a
+                      class="architecture-node node-data"
+                      href="#component-lyre"
+                      data-component-link
+                    >
+                      <span class="node-name">Lyre</span>
+                      <span class="node-purpose">Market data</span>
+                    </a>
+                    <span class="stage-connector" aria-hidden="true"></span>
+                  </li>
+                  <li class="architecture-stage">
+                    <a
+                      class="architecture-node node-data"
+                      href="#component-argus"
+                      data-component-link
+                    >
+                      <span class="node-name">Argus</span>
+                      <span class="node-purpose">Time-aware features</span>
+                    </a>
+                    <span class="stage-connector" aria-hidden="true"></span>
+                  </li>
+                  <li class="architecture-stage">
+                    <a
+                      class="architecture-node node-model"
+                      href="#component-volante"
+                      data-component-link
+                    >
+                      <span class="node-name">Volante</span>
+                      <span class="node-purpose"
+                        >Model training &amp; artifacts</span
+                      >
+                    </a>
+                    <span class="stage-connector" aria-hidden="true"></span>
+                  </li>
+                  <li class="architecture-stage">
+                    <a
+                      class="architecture-node node-evaluation"
+                      href="#component-nemesis"
+                      data-component-link
+                    >
+                      <span class="node-name">Nemesis</span>
+                      <span class="node-purpose"
+                        >Backtesting &amp; validation</span
+                      >
+                    </a>
+                    <span class="stage-connector" aria-hidden="true"></span>
+                  </li>
+                  <li class="architecture-stage">
+                    <a
+                      class="architecture-node node-risk"
+                      href="#component-metis"
+                      data-component-link
+                    >
+                      <span class="node-name">Metis</span>
+                      <span class="node-purpose"
+                        >Strategy selection &amp; risk</span
+                      >
+                    </a>
+                    <span class="stage-connector" aria-hidden="true"></span>
+                  </li>
+                  <li class="architecture-stage">
+                    <a
+                      class="architecture-node node-execution"
+                      href="#component-hermes"
+                      data-component-link
+                    >
+                      <span class="node-name">Hermes</span>
+                      <span class="node-purpose">MT4 execution interface</span>
+                    </a>
+                  </li>
+                </ol>
+              </figure>
             </div>
 
             <div class="platform-components">
-              <article class="item case-study component">
+              <article class="item case-study component" id="component-lyre">
                 <details class="project-details">
                   <summary>
                     <div class="project-heading">
@@ -631,7 +719,7 @@
                   </div>
                 </details>
               </article>
-              <article class="item case-study component">
+              <article class="item case-study component" id="component-argus">
                 <details class="project-details">
                   <summary>
                     <div class="project-heading">
@@ -665,7 +753,7 @@
                   </div>
                 </details>
               </article>
-              <article class="item case-study component">
+              <article class="item case-study component" id="component-nemesis">
                 <details class="project-details">
                   <summary>
                     <div class="project-heading">
@@ -703,7 +791,10 @@
                   </div>
                 </details>
               </article>
-              <article class="item case-study component">
+              <article
+                class="item case-study component"
+                id="component-aletheia"
+              >
                 <details class="project-details">
                   <summary>
                     <div class="project-heading">
@@ -743,7 +834,7 @@
                   </div>
                 </details>
               </article>
-              <article class="item case-study component">
+              <article class="item case-study component" id="component-metis">
                 <details class="project-details">
                   <summary>
                     <div class="project-heading">
@@ -782,7 +873,7 @@
                   </div>
                 </details>
               </article>
-              <article class="item case-study component">
+              <article class="item case-study component" id="component-hermes">
                 <details class="project-details">
                   <summary>
                     <div class="project-heading">
@@ -821,7 +912,7 @@
                   </div>
                 </details>
               </article>
-              <article class="item case-study component">
+              <article class="item case-study component" id="component-volante">
                 <details class="project-details">
                   <summary>
                     <div class="project-heading">
@@ -866,20 +957,6 @@
                 generation.
               </p>
             </section>
-          </article>
-
-          <article class="item case-study" id="rl-coursework">
-            <div class="project-static">
-              <div class="project-heading">
-                <h3>Reinforcement Learning Coursework</h3>
-                <span>Academic project</span>
-              </div>
-              <p>
-                Coursework and experiments focused on reinforcement-learning
-                evaluation and adaptive decision-making.
-              </p>
-              <p class="stack">CS5180-RL-project | Private repository</p>
-            </div>
           </article>
         </section>
       </section>
