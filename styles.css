@@ -281,6 +281,29 @@ h3 {
   font-size: 14px;
 }
 
+#experience > .item {
+  margin-bottom: 30px;
+}
+
+#experience .item-heading > span {
+  flex-shrink: 0;
+}
+
+.role-heading {
+  margin-top: 10px;
+}
+
+.role-heading h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#experience ul + .role-heading {
+  margin-top: 22px;
+}
+
 .stack {
   margin-bottom: 8px;
   font-style: italic;
