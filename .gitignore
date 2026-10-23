@@ -1,0 +1,2 @@
+# Local planning and verification artifacts; never publish to GitHub Pages.
+/.local/

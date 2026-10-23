@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Can He - Computer Vision Engineer focused on production computer vision, manufacturing AI systems, and quantitative research systems."
+      content="Can He - software engineering for production vision, on-demand GPU inference, and tick-level research systems. Manufacturing experience, hands-on implementation, and end-to-end delivery."
     />
     <title>Can He</title>
     <link rel="stylesheet" href="styles.css" />
@@ -28,10 +28,10 @@
           <p class="eyebrow">Computer Vision Engineer</p>
           <h1>Can He</h1>
           <p class="lead">
-            I turn manufacturing requirements into working vision demos within
-            hours and production systems built for reliable, low-intervention
-            operation. My work connects hands-on software development with
-            manufacturing engineering and customer-facing solution delivery.
+            I build software that turns manufacturing requirements into working
+            vision systems, from rapid prototypes to production deployment. My
+            focus is reliable operation, practical integration, and reducing the
+            effort needed to keep systems running.
           </p>
           <div class="actions" aria-label="Profile links">
             <a href="assets/can-he-resume.pdf">Resume PDF</a>
@@ -45,21 +45,27 @@
         </figure>
       </section>
 
+      <nav class="featured-work" aria-label="Featured engineering work">
+        <span class="featured-label">Selected work</span>
+        <a href="#bottle-traceability">Production traceability</a>
+        <a href="#paddle-inference">GPU inference service</a>
+        <a href="#quant-platform">Tick-level research platform</a>
+      </nav>
+
       <section class="section" id="about">
         <h2>About</h2>
         <p>
-          My background spans automotive engineering, project leadership, and an
-          M.S. in Computer Science from Northeastern University. That
-          combination shapes how I work: understand the operating requirements,
-          build a practical solution, and carry it through validation and
-          deployment.
+          I moved from automotive engineering and project leadership into
+          hands-on software development, completing an M.S. in Computer Science
+          at Northeastern University in April 2026. My manufacturing background
+          helps me connect technical decisions with operating constraints,
+          validation requirements, and the people who use the systems.
         </p>
         <p>
-          At Tristar AI, I own production vision pipelines and work with
-          Customer Success on rapid technical demos. My personal engineering
-          work explores on-demand GPU inference and tick-level research systems,
-          with particular attention to resource management, reproducibility, and
-          system reliability.
+          Today, I own vision pipeline development at Tristar AI. Outside work,
+          I build GPU inference services and a tick-level quantitative research
+          platform, exploring resource management, reproducible evaluation, and
+          reliable coordination between software components.
         </p>
       </section>
 
@@ -77,20 +83,21 @@
           </div>
           <ul>
             <li>
-              Own end-to-end delivery of manufacturing vision systems, from
-              inspection requirements and pipeline design through implementation,
-              production integration, and deployment.
+              Own manufacturing vision projects from requirements and software
+              design through implementation, production integration, and
+              deployment, covering both traceability and automated inspection.
             </li>
 
             <li>
               Partner with Customer Success to turn new inspection requirements
-              into working vision demos within hours, owning solution design
-              and implementation for early technical evaluation.
+              into working vision demos within hours, owning solution design and
+              implementation for early technical evaluation.
             </li>
             <li>
-              Simplified a high-speed bottle traceability pipeline to eliminate
-              routine manual intervention during normal operation and reduce
-              ongoing maintenance effort.
+              Removed routine manual intervention from a high-speed bottle
+              traceability workflow by simplifying its processing and
+              operational steps, reducing maintenance effort during normal
+              production.
             </li>
             <li>
               Developing a unified, agent-callable package of vision tools for
@@ -98,9 +105,10 @@
               a second engineering verification before acceptance.
             </li>
             <li>
-              Build production readiness into delivery through failure-path
-              testing, runtime health monitoring, deployment configuration,
-              container packaging, and operational documentation.
+              Validate failure behavior across camera, inference, messaging, and
+              storage interfaces; deliver deployment configuration, runtime
+              health checks, and operational documentation alongside the
+              software.
             </li>
           </ul>
           <div class="item-heading role-heading">
@@ -109,19 +117,20 @@
           </div>
           <ul>
             <li>
-              Built production vision pipelines during the internship, owning
-              tub inspection across four defect categories from image
-              preprocessing and inference to postprocessing and production outputs.
+              Owned the complete tub-inspection workflow for four defect
+              categories, implementing preprocessing, inference integration,
+              postprocessing, and line-specific decision rules for production
+              use.
             </li>
             <li>
-              Designed a manager-worker runtime with process allocation matched
-              to inspection requirements, controlling memory consumption and
-              reducing redundant worker processes.
+              Built a separate manager-worker vision runtime with configurable
+              process allocation, matching inspection workloads while
+              controlling memory consumption and avoiding redundant workers.
             </li>
             <li>
-              Implemented camera capture, data access, upload scheduling, and
-              configuration handling; validated camera, inference, messaging,
-              and storage boundaries with pytest, test doubles, and local fixtures.
+              Delivered camera capture, data access, upload scheduling, and
+              configuration modules, with pytest coverage, test doubles, and
+              local fixtures for integration and failure-path validation.
             </li>
           </ul>
         </article>
@@ -154,8 +163,8 @@
           <ul>
             <li>
               Supported DS5220 Supervised Machine Learning across two semesters,
-              leading office hours and review sessions, explaining core concepts,
-              grading assignments, and preparing answer keys.
+              leading office hours and review sessions, explaining core
+              concepts, grading assignments, and preparing answer keys.
             </li>
           </ul>
         </article>
@@ -228,12 +237,12 @@
             </p>
           </div>
 
-          <article class="item case-study">
+          <article class="item case-study" id="bottle-traceability">
             <details class="project-details">
               <summary>
                 <div class="project-heading">
                   <h3>High-Speed Bottle Traceability Pipeline</h3>
-                  <span>Tristar AI</span>
+                  <span>Tristar AI | Production</span>
                 </div>
                 <p>
                   Built and simplified the complete camera-to-cloud traceability
@@ -249,25 +258,28 @@
                 </p>
                 <ul>
                   <li>
-                    Designed the task model around factory, station, team,
-                    frame, defect/result, and lifecycle metadata so each
-                    inspection event can be traced back to its production
-                    context.
+                    <strong>Event traceability:</strong> designed task and
+                    result records linking camera frames with factory, station,
+                    team, and lifecycle metadata so evidence retains its
+                    production context.
                   </li>
                   <li>
-                    Implemented runner configuration, dev/prod modes, heartbeat
-                    and runtime metrics, queued result publishing, and
-                    object-storage evidence uploads.
+                    <strong>Asynchronous evidence handling:</strong> implemented
+                    upload queues and result publishing to connect image
+                    evidence with task outcomes under high-throughput capture
+                    conditions.
                   </li>
                   <li>
-                    Built resilient upload and result-handling paths so
-                    monitoring, metadata, and image evidence stay aligned with
-                    high-speed line throughput.
+                    <strong>Operational reliability:</strong> built
+                    failure-recovery paths for uploads and results, with
+                    heartbeat monitoring, runtime metrics, and separate
+                    development/production configuration.
                   </li>
                   <li>
-                    Connected capture, task lifecycle state, evidence storage,
-                    and result handling in one workflow to reduce recurring
-                    operational work.
+                    <strong>Workflow simplification:</strong> reduced the
+                    operational steps between capture, processing, and
+                    publishing so routine operation no longer depends on manual
+                    intervention.
                   </li>
                 </ul>
               </div>
@@ -279,7 +291,7 @@
               <summary>
                 <div class="project-heading">
                   <h3>High-Speed Defect Detection Pipeline</h3>
-                  <span>Tristar AI</span>
+                  <span>Tristar AI | Production</span>
                 </div>
                 <p>
                   Owned a high-speed inspection pipeline combining detection and
@@ -295,19 +307,22 @@
                 </p>
                 <ul>
                   <li>
-                    Implemented camera capture and cropping logic for IPC camera
-                    streams, including serial-aware frame handling and
-                    production metadata propagation.
+                    <strong>Input preparation:</strong> implemented IPC camera
+                    capture, serial-aware frame handling, and image cropping,
+                    preserving production metadata through the inference path.
                   </li>
                   <li>
-                    Integrated YOLO and UNet model wrappers for detection and
-                    segmentation-style workflows, with
-                    preprocessing/postprocessing tuned for line-speed operation.
+                    <strong>Model integration:</strong> wrapped YOLO detection
+                    and UNet segmentation with task-specific preprocessing and
+                    postprocessing for line-speed inspection.
                   </li>
                   <li>
-                    Tuned thresholds and filtering with observed production
-                    false-positive behavior around 0.01%, alongside result
-                    pooling and asynchronous evidence publishing.
+                    <strong>Decision quality:</strong> tuned thresholds and
+                    filtering, with an observed false-positive rate of
+                    approximately 0.01% under the production conditions
+                    evaluated. Batched result handling and asynchronous
+                    publishing support the processing workflow without
+                    conflating model output with the final inspection decision.
                   </li>
                 </ul>
               </div>
@@ -319,13 +334,12 @@
               <summary>
                 <div class="project-heading">
                   <h3>Multi-Camera Manufacturing Defect Detection System</h3>
-                  <span>Tristar AI</span>
+                  <span>Tristar AI | Production</span>
                 </div>
                 <p>
-                  Owned tub defect detection and production reliability work in
-                  a six-camera, three-line manufacturing inspection system. The
-                  system uses FIFO-triggered capture, multiprocessing inference,
-                  PLC rejection, and crash-resilient result publishing.
+                  Owned all four tub-defect detection workflows in a six-camera,
+                  three-line inspection system, connecting camera-specific
+                  decisions to production-line rejection and auditable results.
                 </p>
               </summary>
               <div class="project-detail-body">
@@ -335,21 +349,22 @@
                 </p>
                 <ul>
                   <li>
-                    Implemented detection workflows for four tub defect
-                    categories, including preprocessing, inference,
-                    postprocessing, classification, and line/camera-specific
-                    filtering.
+                    <strong>Defect logic:</strong> implemented preprocessing,
+                    inference, postprocessing, and classification for each of
+                    four defect categories, with line/camera-specific filtering.
                   </li>
                   <li>
-                    Maintained capture, inference, rejection, result,
-                    station-status, alerting, and outbox modules across a
-                    production pipeline with multiprocessing workers.
+                    <strong>Inspection-to-rejection integration:</strong>
+                    connected FIFO-triggered capture and multiprocessing
+                    inference with PLC rejection, station status, and alerting
+                    modules.
                   </li>
                   <li>
-                    Added outbox-based evidence and message publishing, PLC
-                    rejection behavior, runtime failure-mode tests, and
-                    low-latency tuning with false-positive behavior around
-                    0.01%.
+                    <strong>Recovery and validation:</strong> implemented
+                    outbox-based evidence/message publishing and runtime
+                    failure-mode tests. Tuned processing and filtering with an
+                    observed false-positive rate of approximately 0.01% under
+                    the production conditions evaluated.
                   </li>
                 </ul>
               </div>
@@ -361,7 +376,7 @@
               <summary>
                 <div class="project-heading">
                   <h3>Manufacturing Defect Data Analysis Pipeline</h3>
-                  <span>Tristar AI</span>
+                  <span>Tristar AI | Production analysis</span>
                 </div>
                 <p>
                   Investigated recurring defect patterns by connecting
@@ -376,14 +391,16 @@
                 </p>
                 <ul>
                   <li>
-                    Connected defect events with image evidence and process
-                    context, using timing signals to investigate recurring
-                    patterns across heterogeneous production data.
+                    <strong>Evidence alignment:</strong> built Python/Pandas
+                    workflows joining defect records with image evidence,
+                    sensor/process streams, and timing context for
+                    investigation.
                   </li>
                   <li>
-                    Built analysis scripts and data-processing workflows to turn
-                    production records into evidence for inspection
-                    improvements.
+                    <strong>Pattern analysis:</strong> reviewed recurring events
+                    across those sources to inform downstream inspection logic,
+                    keeping diagnostic analysis separate from real-time
+                    inference.
                   </li>
                 </ul>
               </div>
@@ -395,7 +412,7 @@
               <summary>
                 <div class="project-heading">
                   <h3>Resource-Aware Production Vision Runtime</h3>
-                  <span>Tristar AI</span>
+                  <span>Tristar AI | Production</span>
                 </div>
                 <p>
                   Built a production vision runtime during my internship around
@@ -411,19 +428,20 @@
                 </p>
                 <ul>
                   <li>
-                    Designed the runtime to add processes as workload needs
-                    grow, while avoiding redundant workers and controlling
-                    memory consumption.
+                    <strong>Process architecture:</strong> separated manager
+                    coordination from worker execution, with configurable
+                    process counts matched to the inspection workload.
                   </li>
                   <li>
-                    Integrated camera/data capture, preprocessing and
-                    postprocessing, configuration loading, upload scheduling,
-                    and local validation into the runtime's production
-                    workflows.
+                    <strong>Runtime integration:</strong> connected capture,
+                    preprocessing/postprocessing, configuration loading, and
+                    upload scheduling within the same execution framework.
                   </li>
                   <li>
-                    Owned implementation and validation across capture,
-                    processing, and production output boundaries.
+                    <strong>Resource control:</strong> avoided unnecessary
+                    worker allocation to limit redundant process and memory use,
+                    with local validation across capture, processing, and output
+                    boundaries.
                   </li>
                 </ul>
               </div>
@@ -435,7 +453,7 @@
               <summary>
                 <div class="project-heading">
                   <h3>Agent-Assisted Vision Engineering Toolkit</h3>
-                  <span>Tristar AI</span>
+                  <span>Tristar AI | In development</span>
                 </div>
                 <p>
                   Developing a unified package that exposes existing vision
@@ -446,24 +464,24 @@
               </summary>
               <div class="project-detail-body">
                 <p class="stack">
-                  In development | Python, reusable packages, agent tool
-                  interfaces, human review
+                  Python, reusable packages, agent tool interfaces, human review
                 </p>
                 <ul>
                   <li>
-                    Consolidating tools behind a common callable interface so
-                    agents can use the engineering capabilities needed for a new
+                    <strong>Tool consolidation:</strong> packaging existing
+                    vision engineering capabilities behind a common callable
+                    interface instead of rebuilding integrations for each
                     project.
                   </li>
                   <li>
-                    Designing a two-stage human review workflow: implementation
-                    review followed by a second engineering verification before
-                    acceptance.
+                    <strong>Agent workflow:</strong> enabling prompts to drive
+                    tool use and project assembly through the shared package.
                   </li>
                   <li>
-                    Targeting a reduction in repetitive implementation effort
-                    and multi-engineer coordination through reusable tools and
-                    consistent interfaces.
+                    <strong>Review model:</strong> retaining implementation
+                    review and a second engineering verification before
+                    acceptance; reducing repetitive development remains the
+                    project's objective.
                   </li>
                 </ul>
               </div>
@@ -495,11 +513,10 @@
                   <span>Personal Project</span>
                 </div>
                 <p>
-                  Built an on-demand GPU inference service on top of my
-                  PaddlePaddle RTX 50-series compatibility work. Models load
-                  when called and leave GPU memory after 60 seconds of
-                  inactivity, keeping the service available without retaining
-                  idle model allocations.
+                  Extended a personal PaddlePaddle fork for RTX 50-series GPU
+                  compatibility into a callable inference service, with
+                  on-demand model loading and GPU-memory release after 60
+                  seconds of inactivity.
                 </p>
               </summary>
               <div class="project-detail-body">
@@ -508,25 +525,28 @@
                 </p>
                 <ul>
                   <li>
-                    Investigated CUDA 12.8/12.9/13.x wheel and dependency paths,
-                    CMake/CUDA architecture settings, and build-system
-                    assumptions that affect newer GPU support.
+                    <strong>Framework compatibility:</strong> adapted build and
+                    dependency configuration for NVIDIA RTX 50-series/Blackwell
+                    hardware, investigating CUDA 12.8/12.9/13.x dependency paths
+                    and CMake/CUDA architecture settings.
                   </li>
                   <li>
-                    Used Dockerized build environments to isolate toolchain
-                    issues, validate reproducible framework builds, and document
-                    compatibility requirements for RTX 50-series hardware.
+                    <strong>Build validation:</strong> used Dockerized
+                    environments to isolate toolchain issues, validate framework
+                    builds, and document hardware and dependency requirements
+                    for the fork.
                   </li>
                   <li>
-                    Extended the compatibility work into a callable server-side
-                    inference service that loads the model on demand and returns
-                    inference results to the caller.
+                    <strong>Serving interface:</strong> wrapped model execution
+                    in a server-side call flow that loads the model when needed
+                    and returns inference results to the requesting application.
                   </li>
                   <li>
-                    Implemented a 60-second inactivity policy that unloads the
-                    model from GPU memory while leaving the service available
-                    for subsequent requests, avoiding continuous GPU-memory
-                    residency while idle.
+                    <strong>GPU lifecycle:</strong> separated service
+                    availability from model residency. The process stays ready
+                    for requests after an idle model leaves GPU memory;
+                    subsequent use loads the model again rather than reserving
+                    its memory continuously.
                   </li>
                 </ul>
                 <p class="project-source">
@@ -548,12 +568,19 @@
               orchestration, risk, and execution interfaces
             </p>
             <p>
-              Built a tick-level FX/XAUUSD research platform connecting
-              market-data ingestion, time-aware features, cost-aware
-              backtesting, and execution interfaces. The system separates
-              research evidence, risk allocation, and execution responsibilities
-              so experiments can be replayed and evaluated under explicit
-              assumptions.
+              Built a personal tick-level FX/XAUUSD research platform spanning
+              market data, features, model experiments, backtesting, risk
+              allocation, and execution interfaces. Each component has a defined
+              responsibility: research produces evidence, validation evaluates
+              it, and selection and execution consume it through separate
+              interfaces.
+            </p>
+            <p class="platform-flow">
+              <strong>Data and evaluation:</strong> Lyre feeds Argus feature
+              workflows; Volante produces model artifacts; Nemesis evaluates
+              strategy evidence. <strong>Coordination and execution:</strong>
+              Aletheia orchestrates stages, Metis allocates risk, and Hermes
+              handles terminal-facing commands and receipts.
             </p>
 
             <div class="platform-components">
@@ -564,9 +591,9 @@
                       <h4>Lyre - Tick-Level Market Data Infrastructure</h4>
                     </div>
                     <p>
-                      Built the shared market-data foundation for the research
-                      ecosystem, separating canonical tick/bar storage from
-                      control-plane metadata.
+                      Provides canonical tick/bar data for feature generation
+                      and replay, with high-volume columnar reads separated from
+                      metadata management.
                     </p>
                   </summary>
                   <div class="project-detail-body">
@@ -576,25 +603,27 @@
                     </p>
                     <ul>
                       <li>
-                        Organized market data into canonical shards and
-                        partitioned columnar storage, with SQLite metadata
-                        supporting data management independently of the
-                        high-volume read path.
+                        <strong>Storage design:</strong> organized market data
+                        into canonical shards and partitioned Parquet, with
+                        SQLite managing metadata separately from the Arrow read
+                        path.
                       </li>
                       <li>
-                        Used Arrow batch reads and performance gates to make
-                        data-access efficiency testable for repeated tick-level
-                        research and replay.
+                        <strong>Performance validation:</strong> built
+                        batch-reading, benchmark reporting, and performance-gate
+                        tooling for repeatable data-access tests.
                       </li>
                       <li>
-                        Provided a consistent data layer for downstream feature
-                        generation and backtesting, reducing duplication of
-                        ingestion and storage logic.
+                        <strong>Downstream contract:</strong> provided shared
+                        data access for feature generation and backtesting so
+                        each consumer does not reimplement ingestion and
+                        storage.
                       </li>
                       <li>
-                        Engineered the data path around 65,536-row Arrow batches
-                        and read-performance gates targeting 1M+ rows/sec for
-                        high-throughput tick research workloads.
+                        <strong>Benchmark configuration:</strong> used
+                        65,536-row Arrow batches and a read-performance gate
+                        with a target of 1M+ rows/sec for tick-data research
+                        workloads.
                       </li>
                     </ul>
                   </div>
@@ -607,9 +636,10 @@
                       <h4>Argus - Time-Aware Feature Engineering</h4>
                     </div>
                     <p>
-                      Built the feature-generation layer between market data and
-                      strategy research, with temporal correctness treated as
-                      part of the data contract.
+                      Transforms tick/bar inputs into research features while
+                      preserving what information was available at each decision
+                      time, keeping future observations out of historical
+                      inputs.
                     </p>
                   </summary>
                   <div class="project-detail-body">
@@ -619,14 +649,15 @@
                     </p>
                     <ul>
                       <li>
-                        Developed tick/bar feature workflows that preserve the
-                        distinction between information available at a decision
-                        time and future observations.
+                        <strong>Temporal logic:</strong> implemented
+                        no-lookahead feature workflows around tick/bar inputs
+                        and the timing of information available to downstream
+                        decisions.
                       </li>
                       <li>
-                        Used columnar processing to support repeatable feature
-                        generation for downstream research without folding
-                        strategy execution into the feature layer.
+                        <strong>Computation:</strong> used Polars/Arrow columnar
+                        processing for repeatable feature generation, separating
+                        feature computation from strategy and execution logic.
                       </li>
                     </ul>
                   </div>
@@ -639,9 +670,9 @@
                       <h4>Nemesis - Reproducible Backtesting and Validation</h4>
                     </div>
                     <p>
-                      Built a protocol-first evaluation platform for
-                      reproducible strategy research, with explicit instrument
-                      contracts and execution assumptions.
+                      Evaluates strategies under explicit instrument and
+                      trading-cost assumptions, with run records and
+                      deterministic replay checks for comparing experiments.
                     </p>
                   </summary>
                   <div class="project-detail-body">
@@ -651,19 +682,20 @@
                     </p>
                     <ul>
                       <li>
-                        Implemented MT4-style strategy interfaces and spread,
-                        slippage, commission, and margin models so results
-                        account for trading costs.
+                        <strong>Simulation contract:</strong> implemented
+                        MT4-style strategy interfaces with instrument contracts
+                        and spread, slippage, commission, and margin models.
                       </li>
                       <li>
-                        Recorded run metadata, trade ledgers, equity curves, and
-                        risk metrics, with deterministic replay checks
-                        supporting experiment comparison.
+                        <strong>Evaluation records:</strong> captured run
+                        metadata, trade ledgers, equity curves, and risk
+                        metrics, using deterministic replay checks to compare
+                        repeated runs.
                       </li>
                       <li>
-                        Kept independent strategy validation separate from
-                        training and execution authorization within the broader
-                        research workflow.
+                        <strong>Validation boundary:</strong> evaluates strategy
+                        evidence separately from model training and downstream
+                        selection or execution decisions.
                       </li>
                     </ul>
                   </div>
@@ -676,10 +708,10 @@
                       <h4>Aletheia - Research Pipeline Orchestrator</h4>
                     </div>
                     <p>
-                      Built a local control plane to coordinate data readiness,
-                      feature generation, model evidence, independent
-                      validation, strategy selection, and execution-interface
-                      stages across separate repositories.
+                      Coordinates multi-repository workflows with
+                      dependency-aware execution and recovery, preventing
+                      downstream stages from proceeding without the required
+                      inputs and evidence.
                     </p>
                   </summary>
                   <div class="project-detail-body">
@@ -689,20 +721,21 @@
                     </p>
                     <ul>
                       <li>
-                        Implemented dependency validation, cycle rejection,
-                        parallel execution of independent steps, timeouts,
-                        retries, and backoff.
+                        <strong>Scheduling:</strong> implemented dependency
+                        validation, cycle rejection, parallel execution of
+                        independent steps, timeouts, retries, and backoff.
                       </li>
                       <li>
-                        Added atomic state publication, process locks,
-                        stale-state recovery, heartbeats, and graceful
-                        process-group shutdown for interrupted runs.
+                        <strong>Recovery:</strong> added atomic state
+                        publication, process locks, stale-state recovery,
+                        heartbeats, and graceful process-group shutdown for
+                        interrupted runs.
                       </li>
                       <li>
-                        Gated downstream steps on schema, status, type, and
-                        freshness checks, with hash-chained audit records and
-                        file fingerprints for provenance and unchanged-input
-                        detection.
+                        <strong>Evidence gates:</strong> gated downstream steps
+                        on schema, status, type, and freshness checks, with
+                        hash-chained audit records and file fingerprints for
+                        provenance and unchanged-input detection.
                       </li>
                     </ul>
                   </div>
@@ -715,9 +748,9 @@
                       <h4>Metis - Strategy Selection and Risk Reservation</h4>
                     </div>
                     <p>
-                      Built a decision layer that combines validated strategy
-                      evidence, market state, and execution feedback before
-                      allocating risk.
+                      Allocates risk from validated strategy evidence and
+                      execution feedback, using durable reservations to keep
+                      repeated requests and reconciliation consistent.
                     </p>
                   </summary>
                   <div class="project-detail-body">
@@ -727,20 +760,21 @@
                     </p>
                     <ul>
                       <li>
-                        Separated strategy selection from model training and
-                        execution, rejecting unvalidated or degraded candidates
-                        and recording allocation reasons.
+                        <strong>Selection rules:</strong> reject unvalidated or
+                        degraded candidates, incorporate market state and
+                        execution feedback, and record reasons for allocations.
                       </li>
                       <li>
-                        Implemented durable SQLite risk reservations with
-                        transactional budget checks, account-bound grants, and
-                        idempotent replay to prevent repeated requests from
-                        creating duplicate reservations.
+                        <strong>State consistency:</strong> implemented
+                        SQLite-backed risk reservations with transactional
+                        budget checks, account-bound grants, and idempotent
+                        replay to prevent duplicate reservations on repeated
+                        requests.
                       </li>
                       <li>
-                        Connected reservation state with reconciliation and
-                        execution ownership so risk accounting is not reduced to
-                        an in-memory counter.
+                        <strong>Reconciliation:</strong> connected persisted
+                        reservation state with execution ownership and inventory
+                        reconciliation across the risk workflow.
                       </li>
                     </ul>
                   </div>
@@ -753,9 +787,9 @@
                       <h4>Hermes - MT4 Execution Gateway</h4>
                     </div>
                     <p>
-                      Built an execution boundary between research-generated
-                      trading intent and terminal-facing commands, with explicit
-                      command status and receipts.
+                      Connects trading intent to MT4-facing commands through
+                      authenticated APIs, explicit command states, and receipt
+                      reconciliation.
                     </p>
                   </summary>
                   <div class="project-detail-body">
@@ -765,19 +799,21 @@
                     </p>
                     <ul>
                       <li>
-                        Developed authenticated, scoped interfaces for account,
-                        quote, order, trade, and command-status access,
-                        supported by API schemas.
+                        <strong>API boundary:</strong> developed authenticated,
+                        scoped interfaces for account, quote, order, trade, and
+                        command-status access, supported by API schemas.
                       </li>
                       <li>
-                        Implemented command identifiers, locking, atomic
-                        publication, expiry, and receipt reconciliation to make
-                        submission and recovery behavior explicit.
+                        <strong>Command lifecycle:</strong> implemented command
+                        identifiers, locking, atomic publication, expiry, and
+                        receipt reconciliation to make submission and recovery
+                        behavior explicit.
                       </li>
                       <li>
-                        Added health, authentication, recovery, and integration
-                        tests, with real-terminal acceptance tracked separately
-                        from software validation.
+                        <strong>Validation:</strong> added health,
+                        authentication, recovery, and integration tests, with
+                        real-terminal acceptance tracked separately from
+                        software validation.
                       </li>
                     </ul>
                   </div>
@@ -790,9 +826,9 @@
                       <h4>Volante - Model Training and Evaluation Evidence</h4>
                     </div>
                     <p>
-                      Developed research workflows for training models and
-                      producing immutable artifacts and frozen evaluation
-                      evidence.
+                      Produces model artifacts and frozen evaluation evidence
+                      for downstream review, keeping training experiments
+                      distinct from strategy selection and trading execution.
                     </p>
                   </summary>
                   <div class="project-detail-body">
@@ -802,14 +838,15 @@
                     </p>
                     <ul>
                       <li>
-                        Explored PPO-based learning and GRU evaluation
-                        workflows, including time alignment and input-window
-                        readiness checks.
+                        <strong>Research workflows:</strong> explored PPO-based
+                        learning and GRU evaluation workflows, including time
+                        alignment and input-window readiness checks.
                       </li>
                       <li>
-                        Separated model artifacts and evaluation evidence from
-                        strategy selection and trade execution through explicit
-                        subsystem boundaries.
+                        <strong>Outputs:</strong> produced immutable model
+                        artifacts and frozen evaluation records for downstream
+                        validation, rather than letting a training run directly
+                        trigger execution.
                       </li>
                     </ul>
                   </div>
@@ -824,29 +861,15 @@
           </article>
 
           <article class="item case-study">
-            <details class="project-details">
-              <summary>
-                <div class="project-heading">
-                  <h3>Reinforcement Learning Coursework</h3>
-                  <span>Personal Project</span>
-                </div>
-                <p>
-                  Coursework and experiments focused on reinforcement-learning
-                  evaluation and adaptive decision-making.
-                </p>
-              </summary>
-              <div class="project-detail-body">
-                <ul>
-                  <li>
-                    Repository:
-                    <a
-                      href="https://github.com/BostonSupremeMantou/CS5180-RL-project"
-                      >CS5180-RL-project</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </details>
+            <div class="project-heading">
+              <h3>Reinforcement Learning Coursework</h3>
+              <span>Academic project</span>
+            </div>
+            <p>
+              Coursework and experiments focused on reinforcement-learning
+              evaluation and adaptive decision-making.
+            </p>
+            <p class="stack">CS5180-RL-project | Private repository</p>
           </article>
         </section>
       </section>
@@ -855,29 +878,34 @@
         <h2>Technical Skills</h2>
         <dl class="skills-list">
           <dt>Languages</dt>
-          <dd>Python, Java, C/C++, R, MQL4, SQL</dd>
-          <dt>AI / Computer Vision</dt>
+          <dd>Python, SQL, C/C++, MQL4</dd>
+          <dt>Vision / Inference</dt>
           <dd>
-            OpenCV, PyTorch, Ultralytics YOLO, UNet, Scikit-Learn, PaddlePaddle,
-            NumPy, Pandas, image preprocessing/postprocessing
+            OpenCV, PyTorch, PaddlePaddle, Ultralytics YOLO, U-Net; detection
+            and segmentation, image preprocessing/postprocessing, model-serving
+            integration
           </dd>
-          <dt>Backend / Data</dt>
+          <dt>Data Engineering</dt>
           <dd>
-            SQLAlchemy, Alembic, PyArrow, Polars, Parquet, SQLite transactions,
-            HTTP APIs, message queues, object storage, pytest, data-access
-            objects, async upload queues, traceability metadata, idempotency and
+            NumPy, Pandas, PyArrow, Polars, Parquet, SQLite, SQLAlchemy,
+            Alembic; columnar processing and transactional data access
+          </dd>
+          <dt>Backend Systems</dt>
+          <dd>
+            HTTP APIs, asynchronous processing, message queues, object storage,
+            multiprocessing, dependency-based orchestration, idempotency,
             reconciliation
           </dd>
-          <dt>DevOps / Observability</dt>
+          <dt>Delivery / Reliability</dt>
           <dd>
-            Docker, Kubernetes, runtime monitoring, systemd, Git, CMake,
-            CI-ready testing workflows, process orchestration, audit trails
+            Docker, Kubernetes, Git, systemd, CMake, CUDA build configuration,
+            pytest, failure-mode testing, runtime monitoring
           </dd>
-          <dt>Industrial / Trading Systems</dt>
+          <dt>Domain Engineering</dt>
           <dd>
-            PLC integration, camera pipelines, tick-level data pipelines, MT4
-            gateways, MQL4, backtesting engines, cost/slippage models, risk
-            controls, trade ledgers
+            Camera/PLC integration, tick-level data processing, no-lookahead
+            features, cost-aware backtesting, deterministic replay, MT4
+            interfaces
           </dd>
         </dl>
       </section>
