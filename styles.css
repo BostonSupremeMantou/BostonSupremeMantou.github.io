@@ -637,8 +637,7 @@ summary:focus-visible {
   padding: 16px 0;
 }
 
-.component h4,
-.related-work h4 {
+.component h4 {
   margin: 0;
   color: var(--ink);
   font-size: 16px;
@@ -647,15 +646,6 @@ summary:focus-visible {
 
 .component:last-child {
   border-bottom: 0;
-}
-
-.related-work {
-  margin-top: 16px;
-  color: #343b44;
-}
-
-.related-work > p {
-  margin: 10px 0 0;
 }
 
 @media print {
