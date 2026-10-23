@@ -24,8 +24,9 @@ body {
   margin: 0;
   color: var(--ink);
   background: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   font-size: 16px;
   line-height: 1.58;
 }
@@ -308,6 +309,94 @@ li {
 
 .skills-list dd {
   margin: 0;
+}
+
+[id] {
+  scroll-margin-top: 110px;
+}
+
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+.project-details > summary,
+.experience-details > summary {
+  cursor: pointer;
+}
+
+summary::marker {
+  color: var(--link);
+}
+
+summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 5px;
+}
+
+.project-details > summary > .project-heading {
+  display: inline-flex;
+  width: calc(100% - 24px);
+  vertical-align: top;
+  align-items: baseline;
+}
+
+.project-details > summary > p {
+  margin: 10px 0 0 22px;
+  max-width: 878px;
+  color: #343b44;
+}
+
+.project-detail-body {
+  padding: 14px 0 0 22px;
+}
+
+.project-detail-body > :last-child {
+  margin-bottom: 0;
+}
+
+.experience-details {
+  margin: 12px 0 22px;
+}
+
+.experience-details > summary {
+  color: var(--link);
+  font-size: 14px;
+}
+
+.platform-components {
+  margin-top: 20px;
+}
+
+.project-group .case-study.component {
+  padding: 16px 0;
+}
+
+.component h4 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.component:last-child {
+  border-bottom: 0;
+}
+
+.related-work {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media print {
+  .site-header,
+  .project-nav {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
